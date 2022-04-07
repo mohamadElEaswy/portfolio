@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
-
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// const firebaseConfig = {
+//   apiKey: "AIzaSyB2lizzLRMICa59kxsdRk12kcw88cO_Da8",
+//   authDomain: "portofolio0101.firebaseapp.com",
+//   projectId: "portofolio0101",
+//   storageBucket: "portofolio0101.appspot.com",
+//   messagingSenderId: "194076309827",
+//   appId: "1:194076309827:web:29526a9f813e41ce41d7f6",
+//   measurementId: "G-FS6BEM8Q78"
+// };
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 void main() {
+
   runApp(const MyApp());
 }
 
@@ -10,6 +23,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
