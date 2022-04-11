@@ -8,7 +8,35 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        // centerTitle: true,
+        title:
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            // IconButton(
+            //     icon: const Icon(Icons.arrow_back_ios), onPressed: () {}),
+             SizedBox(width: 80),
+            Text(
+              'Mohamed Easwy',
+              style: TextStyle(color: Colors.blueAccent),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.white,
+        elevation: 0.0,
+        actions: [
+          const SizedBox(width: 20),
+          TextButton(onPressed: () {}, child: const Text('Skills')),
+          const SizedBox(width: 20),
+          TextButton(onPressed: () {}, child: const Text('Skills')),
+          const SizedBox(width: 20),
+          TextButton(onPressed: () {}, child: const Text('Skills')),
+          const SizedBox(width: 20),
+          TextButton(onPressed: () {}, child: const Text('Skills')),
+          const SizedBox(width: 80),
+        ],
+      ),
       body: const BuildHomeBody(),
     );
   }

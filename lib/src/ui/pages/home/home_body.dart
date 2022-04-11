@@ -6,7 +6,7 @@ class BuildHomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(80),
       child: Row(
         children: [
           Flexible(
@@ -21,7 +21,7 @@ class BuildHomeBody extends StatelessWidget {
                 ),
               ],
             ),
-          ),
+          ),const SizedBox(width: 20),
           Flexible(
             flex: 1,
             child: Container(
