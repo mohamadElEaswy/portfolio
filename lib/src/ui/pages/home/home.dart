@@ -8,15 +8,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: _buildAppBar(),
+      body: const BuildHomeBody(),
+    );
+  }
+
+  //TODO make reusable AppBar and make it responsive
+  AppBar _buildAppBar() => AppBar(
         // centerTitle: true,
-        title:
-        Row(
+        title: Row(
           mainAxisSize: MainAxisSize.min,
           children: const [
             // IconButton(
             //     icon: const Icon(Icons.arrow_back_ios), onPressed: () {}),
-             SizedBox(width: 80),
+            SizedBox(width: 80),
             Text(
               'Mohamed Easwy',
               style: TextStyle(color: Colors.blueAccent),
@@ -27,17 +32,20 @@ class HomePage extends StatelessWidget {
         elevation: 0.0,
         actions: [
           const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('Skills')),
+          TextButton(onPressed: () {}, child: const Text('Home')),
           const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('Skills')),
+          TextButton(onPressed: () {}, child: const Text('My C.V')),
           const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('Skills')),
+          TextButton(onPressed: () {}, child: const Text('My Work')),
           const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('Skills')),
+          TextButton(onPressed: () {}, child: const Text('Contact information')),
           const SizedBox(width: 80),
         ],
-      ),
-      body: const BuildHomeBody(),
-    );
-  }
+        shape: Border(
+          bottom: BorderSide(
+            color: Colors.grey[200]!,
+            width: 1,
+          ),
+        ),
+      );
 }

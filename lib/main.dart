@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'src/core/routs/routs_list.dart';
 import 'src/ui/pages/home/home.dart';
-
+//TODO add copyright section everywhere
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 // const firebaseConfig = {
@@ -26,10 +27,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      //TODO add dark theme property
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.blue,
+        fontFamily: 'Raleway',
       ),
+      routes: routs,
       home: const HomePage(),
     );
   }
