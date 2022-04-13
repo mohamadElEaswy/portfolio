@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/routs/navigation_methods.dart';
+import '../../../core/routs/routs_list.dart';
 import 'home_body.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,13 +10,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(),
+      appBar: _buildAppBar(context),
       body: const BuildHomeBody(),
     );
   }
 
   //TODO make reusable AppBar and make it responsive
-  AppBar _buildAppBar() => AppBar(
+  AppBar _buildAppBar(BuildContext context) => AppBar(
         // centerTitle: true,
         title: Row(
           mainAxisSize: MainAxisSize.min,
@@ -36,9 +38,13 @@ class HomePage extends StatelessWidget {
           const SizedBox(width: 20),
           TextButton(onPressed: () {}, child: const Text('My C.V')),
           const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('My Work')),
+          TextButton(
+              onPressed: () => NavigationMethods.navTo(
+                  navigateTo: NamedRouts.myWork, context: context),
+              child: const Text('My Work')),
           const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('Contact information')),
+          TextButton(
+              onPressed: () {}, child: const Text('Contact information')),
           const SizedBox(width: 80),
         ],
         shape: Border(

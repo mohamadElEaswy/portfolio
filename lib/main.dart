@@ -36,7 +36,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Raleway',
       ),
       routes: routs,
-      home: const HomePage(),
+      initialRoute: NamedRouts.home,
+      // home: const HomePage(),
     );
   }
 }
