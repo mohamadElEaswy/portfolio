@@ -34,6 +34,16 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.blue,
         fontFamily: 'Raleway',
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0.0,iconTheme: const IconThemeData(color: Colors.blue),
+          shape: Border(
+            bottom: BorderSide(
+              color: Colors.grey[200]!,
+              width: 1,
+            ),
+          ),
+        )
       ),
       routes: routs,
       initialRoute: NamedRouts.home,

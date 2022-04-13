@@ -30,8 +30,6 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        backgroundColor: Colors.white,
-        elevation: 0.0,
         actions: [
           const SizedBox(width: 20),
           TextButton(onPressed: () {}, child: const Text('Home')),
@@ -44,14 +42,10 @@ class HomePage extends StatelessWidget {
               child: const Text('My Work')),
           const SizedBox(width: 20),
           TextButton(
-              onPressed: () {}, child: const Text('Contact information')),
+              onPressed: () => NavigationMethods.navTo(
+                  navigateTo: NamedRouts.contactInformation, context: context),
+              child: const Text('Contact information')),
           const SizedBox(width: 80),
         ],
-        shape: Border(
-          bottom: BorderSide(
-            color: Colors.grey[200]!,
-            width: 1,
-          ),
-        ),
       );
 }
