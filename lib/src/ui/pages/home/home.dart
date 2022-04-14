@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../../../../main.dart';
 import '../../../core/routs/navigation_methods.dart';
 import '../../../core/routs/routs_list.dart';
 import '../../widgets/my_app_title.dart';
+import 'global_drawer.dart';
 import 'home_body.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,14 +15,16 @@ class HomePage extends StatelessWidget {
     print(width.toString());
     return Scaffold(
       appBar: _buildAppBar(context, width),
-      body: const BuildHomeBody(),
+      body: BuildHomeBody(width: width),
+      endDrawer: width < 720 ? const GlobalDrawer(): null,
+
     );
   }
 
   AppBar _buildAppBar(BuildContext context, double width) => AppBar(
         // centerTitle: true,
         title: MyAppTitle(width: width),
-        actions: [
+        actions: width > 720 ? [
           const SizedBox(width: 20),
           TextButton(onPressed: () {}, child: const Text('Home')),
           const SizedBox(width: 20),
@@ -49,7 +51,7 @@ class HomePage extends StatelessWidget {
                         : ThemeMode.light;
               }),
           AppBarSizedBox(width: width),
-        ],
+        ] : null,
       );
 }
 
@@ -58,6 +60,6 @@ class AppBarSizedBox extends StatelessWidget {
   final double width;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(width: (width >= 830) ? 80 : 20);
+    return SizedBox(width: (width >= 830) ? 80 : 0);
   }
 }

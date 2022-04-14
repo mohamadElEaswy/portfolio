@@ -5,10 +5,14 @@ class MyWorkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(),
-      body: const Center(
-        child: Text('my work screen'),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(80),
+        child:  Center(
+          child: Text('my work screen'),
+        ),
       ),
     );
   }

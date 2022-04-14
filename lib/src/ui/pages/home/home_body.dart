@@ -6,12 +6,13 @@ import 'social_media_icons.dart';
 
 //TODO make home page body code more simple and easy to read
 class BuildHomeBody extends StatelessWidget {
-  const BuildHomeBody({Key? key}) : super(key: key);
+  const BuildHomeBody({Key? key, required this.width}) : super(key: key);
 
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(80.0),
+      padding: EdgeInsets.all(width > 650 ? 80.0 : 20),
       child: Row(
         children: [
           Flexible(
@@ -20,6 +21,9 @@ class BuildHomeBody extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const Text(
+                    'this website is under development so it\'s not completed yet... '),
+                const GlobalSizedBox(),
                 const Text(
                   'Mohamed Easwy Flutter Developer',
                   style: TextStyle(
@@ -37,14 +41,16 @@ class BuildHomeBody extends StatelessWidget {
                 const GlobalSizedBox(height: 40),
                 Row(
                   children: [
-                    ElevatedButton(onPressed: () {},
+                    ElevatedButton(
+                      onPressed: () {},
                       child: const Text('Hire Me!'),
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(
                           color: Colors.blueAccent,
                           width: 1,
                         ),
-                      ),),
+                      ),
+                    ),
                     const SizedBox(width: 20),
                     OutlinedButton(
                       onPressed: () {},
@@ -56,7 +62,6 @@ class BuildHomeBody extends StatelessWidget {
                         ),
                       ),
                     ),
-
                   ],
                 ),
 
@@ -81,4 +86,3 @@ class BuildHomeBody extends StatelessWidget {
     );
   }
 }
-
