@@ -26,4 +26,5 @@ jobs:
         flutter-version: '2.10.1'
     - run: flutter pub get
     - run: flutter test
+    - run: flutter create .
     - run: flutter build web
