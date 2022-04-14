@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'src/core/routs/routs_list.dart';
-import 'src/ui/pages/home/home.dart';
+import 'src/ui/theme/theme.dart';
+
 //TODO add copyright section everywhere
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
@@ -16,38 +16,30 @@ import 'src/ui/pages/home/home.dart';
 // };
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
+
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
+  static final ValueNotifier<ThemeMode> themeNotifier =
+      ValueNotifier(ThemeMode.light);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      //TODO add dark theme property
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.blue,
-        fontFamily: 'Raleway',
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.white,
-          elevation: 0.0,iconTheme: const IconThemeData(color: Colors.blue),
-          shape: Border(
-            bottom: BorderSide(
-              color: Colors.grey[200]!,
-              width: 1,
-            ),
-          ),
-        )
+    return ValueListenableBuilder(
+      valueListenable: themeNotifier,
+      builder: (_, ThemeMode currentMode, __) => MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        darkTheme: MyAppTheme.darkThemeData,
+        themeMode: currentMode,
+        theme: MyAppTheme.lightThemeData,
+        routes: routs,
+        initialRoute: NamedRouts.home,
+        // home: const HomePage(),
       ),
-      routes: routs,
-      initialRoute: NamedRouts.home,
-      // home: const HomePage(),
     );
   }
 }
