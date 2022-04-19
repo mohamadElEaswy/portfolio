@@ -3,6 +3,7 @@ import 'package:portfolio/src/core/assets/assets_routs.dart';
 import '../../theme/theme.dart';
 import '../../widgets/global_sized_box.dart';
 import 'social_media_icons.dart';
+const String myCVLink ='https://drive.google.com/file/d/15AXSYEMqSk1DD6u_8jGsrbwcip1FKRXi/view?usp=sharing';
 
 //TODO make home page body code more simple and easy to read
 class BuildHomeBody extends StatelessWidget {
@@ -53,7 +54,9 @@ class BuildHomeBody extends StatelessWidget {
                     ),
                     const SizedBox(width: 20),
                     OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        launchURL(myCVLink);
+                      },
                       child: const Text('Download C.V'),
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(
