@@ -3,7 +3,9 @@ import 'package:portfolio/src/core/assets/assets_routs.dart';
 import '../../theme/theme.dart';
 import '../../widgets/global_sized_box.dart';
 import 'social_media_icons.dart';
-const String myCVLink ='https://drive.google.com/file/d/15AXSYEMqSk1DD6u_8jGsrbwcip1FKRXi/view?usp=sharing';
+
+const String myCVLink ='https://firebasestorage.googleapis.com/v0/b/portofolio0101.appspot.com/o/Mohamed_cv.pdf?alt=media&token=7cd0c6d8-4f99-44bf-a434-eab4150fe6e4';
+    // 'https://drive.google.com/file/d/15AXSYEMqSk1DD6u_8jGsrbwcip1FKRXi/view?usp=sharing';
 
 //TODO make home page body code more simple and easy to read
 class BuildHomeBody extends StatelessWidget {

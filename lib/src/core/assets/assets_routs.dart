@@ -5,6 +5,7 @@ class AssetsRoute {
   static const twitter = 'assets/icons/twitter.png';
   static const stackOverflow = 'assets/icons/stack-overflow.png';
   static const person = 'assets/images/person.jpg';
+  static const tm = 'assets/images/tm.png';
   static const whatsapp = 'assets/icons/whatsapp.png';
   static const telephone = 'assets/icons/telephone.png';
 }

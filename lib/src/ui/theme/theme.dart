@@ -55,4 +55,8 @@ class MyAppTheme {
   );
   static const Radius cornerRadius = Radius.circular(20);
   static const TextStyle greyBodyText = TextStyle(color: Colors.grey);
+
+  static const TextStyle projectTitleTextTheme = TextStyle(
+      color: Colors.black, fontWeight: FontWeight.bold,fontSize: 22
+  );
 }
