@@ -4,6 +4,8 @@ import 'build_my_work_item.dart';
 
 const String tmGooglePlay =
     'https://play.google.com/store/apps/details?id=com.edges.tm';
+const String socialMediaRepo =
+    'https://github.com/mohamadElEaswy/social-media-app';
 
 class MyWorkPage extends StatelessWidget {
   const MyWorkPage({Key? key}) : super(key: key);
@@ -33,7 +35,7 @@ class MyWorkPage extends StatelessWidget {
                 projectTitle: 'chatting app',
                 projectDescription: 'project Description',
                 image: AssetsRoute.git,
-                urlString: '',
+                urlString: socialMediaRepo,
               ),
                SizedBox(height: 20),
               BuildMyWorkItem(
