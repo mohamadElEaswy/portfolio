@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "47534cbd17312c02b3f42ae2d00ace1a",
+  "assets/AssetManifest.json": "d40b3db852b84bdfe19007acdc92f4fc",
 "assets/assets/fonts/Raleway/static/Raleway-Black.ttf": "38b405eba92acbb5aef45d8152f2a736",
 "assets/assets/fonts/Raleway/static/Raleway-Bold.ttf": "7802d8b27fcb19893ce6b38c0789268e",
 "assets/assets/fonts/Raleway/static/Raleway-ExtraBold.ttf": "c9503ab0f939e9d37fcfb59b25acf8b3",
@@ -21,6 +21,7 @@ const RESOURCES = {
 "assets/assets/icons/twitter.png": "8f35a40403a84631c4125c4f1859c7a6",
 "assets/assets/icons/whatsapp.png": "774352deeaa60ebe04164a1e28489771",
 "assets/assets/images/person.jpg": "b34539dee5889307825992bfddccf674",
+"assets/assets/images/tm.png": "454f87138f61a9ac36191d4d88f100b6",
 "assets/FontManifest.json": "df47b159fa8f0b87c5006299a8cfa983",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
 "assets/NOTICES": "36090f27aea0bec01bde94790bac8997",
@@ -34,9 +35,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "3dd2f5d76b5a1d81e60cda28906976d8",
-"/": "3dd2f5d76b5a1d81e60cda28906976d8",
-"main.dart.js": "3e2517115ab45b29800a777d11e42771",
+"index.html": "eb8aee061f81e3331def94227b87c02d",
+"/": "eb8aee061f81e3331def94227b87c02d",
+"main.dart.js": "8d3816ece511b1579edb730d0aa734a1",
 "manifest.json": "e74af8957b5899dc6da961caee768ec9",
 "version.json": "009c9e65172e010890f7f65fde438006"
 };

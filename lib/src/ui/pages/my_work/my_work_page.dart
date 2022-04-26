@@ -4,8 +4,10 @@ import 'build_my_work_item.dart';
 
 const String tmGooglePlay =
     'https://play.google.com/store/apps/details?id=com.edges.tm';
-const String socialMediaRepo =
+const String socialMediaAppRepo =
     'https://github.com/mohamadElEaswy/social-media-app';
+const String googleSignInRepo =
+    'https://github.com/mohamadElEaswy/sign-in-with-google';
 
 class MyWorkPage extends StatelessWidget {
   const MyWorkPage({Key? key}) : super(key: key);
@@ -32,17 +34,24 @@ class MyWorkPage extends StatelessWidget {
               ),
                SizedBox(height: 20),
               BuildMyWorkItem(
-                projectTitle: 'chatting app',
+                projectTitle: 'Social Media App',
                 projectDescription: 'project Description',
                 image: AssetsRoute.git,
-                urlString: socialMediaRepo,
+                urlString: socialMediaAppRepo,
               ),
                SizedBox(height: 20),
               BuildMyWorkItem(
-                projectTitle: 'chatting app',
-                projectDescription: 'project Description',
+                projectTitle: 'Shop App',
+                projectDescription: 'as a training I developed this ecommerce app',
                 image: AssetsRoute.git,
-                urlString: '',
+                urlString: 'https://github.com/mohamadElEaswy/ecommerce-Shop-App',
+              ),
+              SizedBox(height: 20),
+              BuildMyWorkItem(
+                projectTitle: 'Google Sign in and register',
+                projectDescription: 'a simple project to login and register using google',
+                image: AssetsRoute.git,
+                urlString: googleSignInRepo,
               ),
             ],
           )),
