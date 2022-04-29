@@ -27,8 +27,8 @@ class HomePage extends StatelessWidget {
         actions: width > 720 ? [
           const SizedBox(width: 20),
           TextButton(onPressed: () {}, child: const Text('Home')),
-          const SizedBox(width: 20),
-          TextButton(onPressed: () {}, child: const Text('My C.V')),
+          // const SizedBox(width: 20),
+          // TextButton(onPressed: () {}, child: const Text('My C.V')),
           const SizedBox(width: 20),
           TextButton(
               onPressed: () => NavigationMethods.navTo(
