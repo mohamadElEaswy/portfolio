@@ -23,10 +23,10 @@ class MyWorkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('My work'),
-      //   centerTitle: true,
-      // ),
+      appBar: AppBar(
+        title: const Text('My work'),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(80),
         child: Column(

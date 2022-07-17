@@ -22,8 +22,7 @@ class SocialMediaIconsSection extends StatelessWidget {
           ),
           GlobalImageButton(
             image: AssetsRoute.stackOverflow,
-            onPressed: () =>
-                launchURL(ConstLinks.linkStackoverflow),
+            onPressed: () => launchURL(ConstLinks.linkStackoverflow),
             tooltip: 'stackoverflow',
           ),
           GlobalImageButton(
@@ -51,11 +50,12 @@ class SocialMediaIconsSection extends StatelessWidget {
     );
   }
 }
+
 launchURL(String url) async {
-  if (await canLaunch(url)) {
-    await launch(url);
+  Uri uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
   } else {
-    //TODO show snack bar if there is an Error
     throw 'Could not launch $url';
   }
 }

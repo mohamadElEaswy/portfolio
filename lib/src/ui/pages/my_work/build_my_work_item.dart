@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio/src/ui/pages/home/social_media_icons.dart';
 import '../../theme/theme.dart';
 
 class BuildMyWorkItem extends StatelessWidget {
@@ -18,7 +18,7 @@ class BuildMyWorkItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ()=>launch(urlString),
+      onTap: ()=>launchURL(urlString),
       child: Container(
         padding: const EdgeInsets.all(10),
         child: Row(

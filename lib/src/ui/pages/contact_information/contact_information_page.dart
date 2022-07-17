@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import '../../../core/assets/assets_routs.dart';
 import '../../../core/const_links/const_links.dart';
 import '../../widgets/image_button.dart';
@@ -12,7 +11,10 @@ class ContactInformationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(),
+        appBar: AppBar(
+        title: const Text('My work'),
+        centerTitle: true,
+      ),
         body: Container(
       padding: const EdgeInsets.all(20),
       child: Center(
